@@ -2,7 +2,6 @@ import AccountService from "../src/AccountService"
 import Console from "../src/Console"
 jest.mock("../src/Console")
 
-
 describe('Print statements', () => {
   it('Print statements', () => {
     const accountService = new AccountService()
