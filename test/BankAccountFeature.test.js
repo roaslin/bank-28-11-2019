@@ -1,10 +1,13 @@
 import AccountService from "../src/AccountService"
 import Console from "../src/Console"
+import TrasanctionRepository from "../src/TransactionRepository"
+
 jest.mock("../src/Console")
 
 describe('Print statements', () => {
   it('Print statements', () => {
-    const accountService = new AccountService()
+    const repository = new TrasanctionRepository()
+    const accountService = new AccountService(repository)
     
     accountService.deposit(3000)
     accountService.deposit(1000)
